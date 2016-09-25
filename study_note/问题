@@ -1,0 +1,14 @@
+1.生成URL地址问题：
+    （1）如果当前URL地址为：http://192.168.1.107:9097/，{:url('admin/User/login')}生成的地址为：
+        http://192.168.1.107:9097/admin/user/login
+    （2）如果当前URL地址为：{:url('admin/User/login')}生成的地址为：
+        http://192.168.1.107:9097/index.php/admin/user/login
+    方式（1）生成的地址访问时会出错误：“NOT FOUND    The requested URL /admin/user/login was not found on this server.”
+    解决方法：vi /etc/apache2/apache2.conf
+                <Directory /var/www/html/public>
+                       Options Indexes FollowSymLinks
+                       AllowOverride None   修改为：All
+                       Require all granted
+                </Directory>
+            重启apache:   /etc/init.d/apache2 restart
+    官方手册：架构--》URL访问--》隐藏入口文件，不生效？？？？
