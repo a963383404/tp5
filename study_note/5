@@ -1,0 +1,49 @@
+web组件安装
+bower(组件之间的依赖关系，升级时自动检测同时更新):bower.io
+npm:www.npmjs.com
+nodejs:
+
+nodejs-->npm-->bower
+
+1.nodejs安装：
+（1）apt-get install nodejs
+（2）查看版本：nodejs -v
+    v4.2.6
+（3）安装最新版本的方法，可参考下面网址：
+    https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+    *根据官网方法，没有安装成功版本6.X
+2.npmp安装
+（1）curl http://npmjs.org/install.sh | sudo sh根据网上这个方法来安装，没有安装成功，报错
+    sh: 1: cannot open html: No such file
+    sh: 2: Syntax error: redirection unexpected
+（2）apt-get install npm
+    直接这样安装
+    查看版本：npm -v
+    3.5.2
+3.安装bower
+    npm install bower -g
+    查看版本：bower -v 提示错误：
+        /usr/bin/env: ‘node’: No such file or directory
+    解决办法，参考：http://www.linuxdiyf.com/linux/19455.html，里面提到的coffee找不到，就按下面方法做相应的修改
+    在/usr/local/bin下找到：
+        bower -> ../lib/node_modules/bower/bin/bower
+    进入/usr/local/lib/node_modules/bower/bin，用vi打开文件下的bower，将：
+        #!/usr/bin/env node
+        require('../lib/bin/bower');
+    修改为：
+        #!/usr/bin/env nodejs
+        require('../lib/bin/bower');
+    原因：第一行的!/usr/bin/env node这里到node是找不到的，因为nodejs下载后，引用的名字不叫node而是nodejs，所以把node改为nodejs就可以了
+4.组件统一放在/pulic下
+（1）安装bootstrap
+    bower install bootstrap
+        提示错误：bower ESUDO         Cannot be run with sudo
+        解决：
+            bower install --allow-root
+            提示错误：bower ENOENT        No bower.json present
+                解决：
+       直接在要安装组件的目录下创建文件.bowerrc，并添加以下内容：
+        { "allow_root": true }
+        参考：http://stackoverflow.com/questions/25672924/run-bower-from-root-user-its-possible-how
+    bower list:列出所有已安装组件，查看依赖关系，如果有错误会提示
+    bower uninstall juqery：删除juqery

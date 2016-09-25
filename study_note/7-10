@@ -1,0 +1,37 @@
+1.安装font-awesome组件
+    bower install font-awesome
+    font-awesome:一套绝佳的图标字体库和CSS框架
+    使用教程：
+2.安装uploadify组件
+    bower install uploadify
+    uploadify:jquery无刷新文件上传
+    使用教程：
+3.安装Swiper组件
+    bower install swiper
+    首页滚动栏
+    网址：http://www.swiper.com.cn/api/index.html
+4.安装jquery-goup组件
+    bower install uploadify
+    jquery.goup:一个按钮，点击后滚动到顶部
+    使用教程：
+        $(document).ready(function () {
+            $.goup({
+                trigger: 100,
+                bottomOffset: 10,
+                locationOffset: 10,
+                title: '',
+                titleAsText: false,
+                containerColor : '#e7faf4',
+                arrowColor : '#15c288',
+            });
+        });
+        里面的参数具体参考内部函数。
+    网址：http://ryuk87.github.io/jquery-goup/
+修改个的boostrap js文件直接复制过来（作者修改好的）
+
+顶部标题
+滚动栏
+资讯栏
+底部
+
+主要研究TP框架，别的略过（照抄）

@@ -1,0 +1,103 @@
+1.定义admin模块
+	file:common.php
+	dir:
+	controller:user,index
+	model:
+	view:
+2.登录和注册模块
+	User->login();
+	User->register();
+	模版：在application-->admin-->view文件夹下（与前台模版位置不同）
+		在配置文件里设置： 'view_path' => APP_PATH.'admin/view/',
+3.hplus_v4.1插件(在作者的官网下载)
+	将这里面的文件夹放在pulic->static里：css,font,js,img文件
+	在配置文件中添加：这个文件夹对就的模版替换变量：__TATIC__
+	将这个插件里的login.html和login.html页面入进相应的文件中
+	格式不对，复制里面的内容过来。
+	修改里面的CSS和JS引用路径
+		在app配置文件下配置“模板输出替换”：view_replace_str => []
+	登录页面已写好格式要求，<input type='email'	表示邮件格式，格式不对会提示
+	模块中生成URL：
+		可以U()函数，在模板中使用方法：{：U('login')}
+		上面报错，没有U函数，改用url()
+		参考“助手函数”：V:\TP\thinkphp\helper.php，这里一总写三十二个助手函数
+4.谷歌浏览器，安装插件Postman_v3.2.8
+	安装方法：
+		（1）翻墙直接在商店里搜索安装
+		（2）扩展程序--》加载已解压的扩展程序
+			_metadata文件名的下划线去掉，就不会有版本冲突了
+11讲主要是弄好登录和注册的静态html文件，安装API调试插件Postman
+
+
+RESTul Web API设计
+	无状态的，不涉及session和cookie的
+	本次调用请求和下一次调用请求完全无关
+
+	设计细节：（1）域名；（2）路径（网址）
+
+	操作类型：
+		get(SELECT):
+		post(CREATE):
+		pu(PUDATE):
+		delete(DELETE):
+
+	状态码：
+		200[get]:
+		201[post/put]:
+		204[delete]:
+		404 not found - [*]:记录不存在
+
+	对应的文件：thinkphp->library->think->controller->Rest.php
+12讲介绍了RESTful Web API的一些概念
+
+thinkphp5单独的模块可以绑定单独域名：
+建API模块：
+	controller:Error	创建一个空的控制器，原因：不需要每个模块都对应生成一个新的控制器，减少了文件，简单。旧版本空控制器的名称为：empty,新版本更改了
+class extends Rest{
+	更改$restTypeLIst,restDefaultType,$restOutputType,这三个的参数（参考Rest)
+	新添加：
+	protected $otherResource = ["plc",'user','config']
+	user：防止输出所有用户，确保user表的数据安全
+	protected $resource_name = '';
+
+	public function _empty($name) {
+		$table = $this->$resource_name = strtolower(CONTROLLER_NAME);
+		if ( in_array($table,$this->otherResource ) {
+			$this->$table($name);
+		}else {
+			//判断数据表名是否存在
+			if (M()->query("SHOW TABLES LIKE '".C('database.prefix')."{$table}'"){
+				return $this->response(['code'=>404,'message'=>“资源{$this->resource_name}.不存在”]，$this->restDefaultType,404);
+			}
+		}
+	}
+	更改一下数据库配置文件
+	？数据库前缀这样来读取，有没有常量定义的？？
+	public function user($name) {
+
+	}
+}
+
+
+api-->config设置参数：
+	return [
+		'default_action' => 'list',
+		'default_return_type' => 'json’，//如果没写这个，return$this->response(),这里返回感觉了信息
+		测试一下是不是这个原因
+	]
+	这里怎样理解?，这样写相当于_empty($name = ‘list')
+
+用postName高度，先GET，网址为：	http://studyfoxcms.studyfox.cn/index.php/api/user
+第13讲是API代码的书写。
+知识点：
+	(1)怎样得到当前的控制器名：
+		旧版本中可以通过“CONTROLLER_NAME”得到，其在ThinkPHP\Library\Think\Dispatcher.class.php中有定义。
+		但新版本中没有这个文件，并没有定义这些常量。
+		新版本获取方法：
+			$request = Request::instance();《===》助手函数：request();
+            echo "当前模块名称是" . $request->module();
+            echo "当前控制器名称是" . $request->controller();
+            echo "当前操作名称是" . $request->action();
+		参考：手册--》请求--》请求信息
+		处理文件：V:\TP\thinkphp\library\think\Request.php
+	（2）nvicatMysql连不上docker里的数据库，看看是什么原因？？？

@@ -1,0 +1,219 @@
+前面内容回顾：
+    1.利用空控制器（Error），来汇集和处理所有控制器中的请求信息（GET）
+    2.这里统称为资源，资源又分为二类：
+        （1）类中自定义资源：protected $otherResource = [];
+        （2）数据表中资源：
+    上一节中文不显示的原因：
+        项目文件编码设置为gbk的原因
+    $this->response(继承了Rest里的方法)《===》response();
+
+查询数据（GET）
+    处理数据表中资源：
+        （1）实例化表模型，$model = M($table);//新版本应该不能这样的
+        （2）查询结果，$result = true;//默认为查询到结果
+        （3）返回的查询数据， $data = array();
+        （4）返回状态码，$code = 404;//默认为查询记录不存在
+        （5）判断请求方式（GET,POST,PUT,DELETE）：
+            获取请方式用：$this->method;//在类Reset中有定义
+            switch( $this->method ):
+                case "get":
+                    a.判断是否为“list"（方法名），是就查询所有数据
+                    b.不是”list"，就条件查询单条记录：
+                        $id = $name;
+                        $data = $model->find($id);
+                    接着再判断$data是否为空：
+                    a.为空时，$result = false
+                    b.不为空时，$code = 201;
+                    再接着根据$result，进行跳转：
+                        $this->success($data,$code);
+                        $this->error();
+                    break;
+                default:
+                    break;
+    新的操作方法：
+        （1）success:
+            $response = [
+                'data' = $data，
+                'code' = $code，
+                'info' = $this->getInfo().$this->resource_name.'成功'
+            ];
+            return response();
+        （2）error:
+            同上
+        （3）返回信息getInfo():
+            $message = ['get' => "获取“，。。。"];
+            return isset($message[$this->method]) ? $message[$this->method] : $this->method;
+第十四讲通过RESTful API获取用户信息
+
+去除URL地址上的后缀（用url()生成地址时有后缀）：
+    配置文件：'url_html_suffix' = '',
+在API-》Error中新增方法user():
+    在$otherResource中添加”user"让其直接走“（1）类中定义资源”
+    其方法中的内容，参照：该页的12~32行，对其中的相应内容进行修改：
+        （1）直接实例化User
+        （2）GET，不需要查找全部内容（“list"），因为是用来验证用户名的
+            用户名通过get得到：$map['username'] = I('get.username');
+            查询特定信息，指定字段：
+                $data = $model->where($map)->field("id,username,email")->find();
+        （3）POST，注册时插入数据
+            直接$post = $model->create();
+            //postman中可以直接模拟表单输入数据进行插入
+            a.判断$post==false,
+                得到数据库返回的错误信息：$data = $post->getError();
+                $result = false;
+            b.$post为true的话，
+                取得插入id:$id = $post->add();
+                判断id是存在来判断插入是否成功。
+第十五讲通过RESTful API插入数据,这里要研究一下框架里的Model型的实现方式了
+
+thinkphp5.0正式版已公布，布局正式版，搞懂composer。
+
+
+1.html5里的表单提示：
+    更改原来注册页面中的提示，不能为空：
+    在<input...>里添加：
+        oninvalid="setCustomValidity('用户名不能为空')" oninput="setCustomValidity()"
+2.注册页面
+    （1）将表单里的action地址更改为：api/user;<input>里添加name属性
+    （2）在提交按钮的class里添加ajax-post，通过js处理表单提交
+    （3）新建js文件：public-->static-->js==>common.js,并在注册页面中引入该文件
+    （4）common.js里的内容：
+        $(function(){
+            $('.ajax-post').on('click',function(){
+                //用户名，密码，确认密码为空时，return
+                if () {
+                    return;
+                }
+                var target,form,query;
+                form = $('.user-form');
+                target = form.get(0).action;//?
+                //查询的数据
+                query = $("input[name=username']").serialize()+"&"+$("input[name=password']").serialize()
+                $.post(target,query).success(function(data){
+                    if (data.code == 201){
+                        alert("成功");
+                    }
+                })
+            });
+        });
+第十六讲前端注册页面的处理
+
+
+1.新增模块（buid.php)：
+    'common' => [
+        '__dir__'   => ['controller','model'],
+        'model'     => ['User'],
+    ]
+2.参考手册：自动验证和自动完成（这节所讲内容可能并不适应新版本）
+    新版本里验证已独立出来了，参考手册：验证一章
+3.application-->common-->model-->User.php
+    (1)命名空间下添加：T('model/Auto');//PHP5.5及以上无需加
+    (2)
+    class User extends \Think\Model {
+        use \traits\model\Auto;
+        public function _initialize() {
+            //自动验证
+            $this->validate = array();
+
+            //自动完成
+            $this->auto = array(
+                array('password','md5',self::MODEL_BOTH,'function'),
+                array('last_login_time','getdate',self::MODEL_BOTH,'callback'),
+                array('create_time','getdate',self::MODEL_INSERT,'callback'),
+                array('last_login_ip','get_client_ip',self::MODEL_BOTH,'callback'),
+            );
+        }
+
+        protected function getdate() {
+            return date('Y-m-d H:i:s');
+        }
+        //新版本中有这个函数，不需要这样写了吧
+        protected function get_client_ip() {
+            return $_SERVER['REMOTE_ADDR'];
+        }
+    }
+4.注意：实例化时要将D()转换成M()，新版本中可能没这两个方法，要慢慢研究
+    （1）旧版本实例化模型为：M()
+         新版本实例化模型为：Model()
+     (2)旧版本实例化自定义模型为：D()
+         新版本中是不是取消这个？
+            有的，没有取消。看看二者（1）跟（2）的区别
+            直接搜索“自动验证”和“自动完成”就有相应的内容
+第十七讲后台自动完成实现方法
+
+
+
+1.删除<input里的invalidate两个验证，自己直接在common里验证
+    var username = document.getElementById("username");
+    var password = document.getElementById("username");
+    var repassword = document.getElementById("username");
+    if ( username.value=='' ) {
+        username.setCustomValidity("用户名不能为空");
+        return;
+    } else {
+        username.setCustomValidity("");
+    }
+
+    判断密码是否为空，同上
+    判断确认密码是否为空，同上
+    判断密码是否一致，
+2.api-->error-->User
+    (1)判断用户名是重复：
+        在添加用户的最上面，先判断用户名是否存在
+        $username = I("username");
+        $count = $model->where("username='".$user."'")->count();
+        用户名存在的话，返回的状态码为：202
+    添加$url=''，跳转地址
+        在success(,,$url)里添加，error里也一样
+        先判断$url是否有值，然后再赋值进$response数组里
+    返回js代码中，跳转：
+        location.href = '';
+第十八讲注册判断用户名密码和注册完后的跳转问题
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

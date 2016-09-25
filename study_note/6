@@ -1,0 +1,55 @@
+1.改变模版文件，变为根目录下template/default/index/index.html
+    怎样设置默认模版路径？
+    在配置文件中配置"view_path"没反应？？
+        继承Controller后，可以识别到该设置。但是输出不了内容？
+            漏了return.
+2.渲演模版
+    入口文件加入常量：
+        //模版文件目录
+        define('TEMPLAE_PATH',DIR.'/../template/');
+（1）$view = new \think\View();
+    return $view->fetch(TEMPLATE_PATH.'default/index/index.html');
+
+（2）控制器继承Controller
+    class Index extends Controller
+    return $this->fetch(TEMPLATE_PATH.'default/index/index.html');
+3.开启Trace调试
+    旧版本是：'SHOW_PAGE_TRACE' =>true, // 显示页面Trace信息
+    新版本改为：'app_trace' =>  true,// 开启应用Trace调试
+    参考手册：“错误和调试”
+4.系统变量输出
+    参考：模版--》系统变量
+5.模板替换
+     //    模板相关配置
+    'parse_str' => [
+        '__PUBLIC__' => __ROOT__ ,
+        '__BOWER__' => __ROOT__ .'/bower_components' ,
+    ],
+    在5.0 rc4中好像没有这个设置？？？
+    新版本中改为：
+    'view_replace_str'  =>  [
+        '__PUBLIC__'=>'/public/',
+        '__ROOT__' => '/',
+    ]
+    参考：手册--》视图--》输出替换
+
+    如果要添加__ROOT__，以前版本中的用法，则要添加以下内容：
+    if(!IS_CLI) {
+        // 当前文件名
+        if(!defined('_PHP_FILE_')) {
+            if(IS_CGI) {
+                //CGI/FASTCGI模式下
+                $_temp  = explode('.php',$_SERVER['PHP_SELF']);
+                define('_PHP_FILE_',    rtrim(str_replace($_SERVER['HTTP_HOST'],'',$_temp[0].'.php'),'/'));
+            }else {
+                define('_PHP_FILE_',    rtrim($_SERVER['SCRIPT_NAME'],'/'));
+            }
+        }
+        if(!defined('__ROOT__')) {
+            $_root  =   rtrim(dirname(_PHP_FILE_),'/');
+            define('__ROOT__',  (($_root=='/' || $_root=='\\')?'':$_root));
+        }
+    }
+    并在V:\TP\thinkphp\base.php文件中添加：
+    define('IS_CGI', strpos(PHP_SAPI, 'cgi') === 0 ? 1 : 0);
+    define('IS_CLI', PHP_SAPI == 'cli' ? true : false);
