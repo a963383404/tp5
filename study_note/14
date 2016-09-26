@@ -138,6 +138,21 @@ thinkphp5.0正式版已公布，布局正式版，搞懂composer。
             return $_SERVER['REMOTE_ADDR'];
         }
     }
+新知识点
+    新版本如何实现“自动难”：
+        （1）定义自动验证类：application\common\validate\User.php
+            a.继承验证类：thinkphp\library\think\Validate.php
+            b.定义规则：
+                protected $rule = [];
+            c.自定义“提示信息”：
+                protected $message = [];
+        （2）在用的时候实例化验证类：
+            a.实例化类：
+                $validate = validate('user');
+            b.验证数据：
+                $validate->check($map)
+            c.验证不通过，取得错误信息：
+                $validate->getError();
 4.注意：实例化时要将D()转换成M()，新版本中可能没这两个方法，要慢慢研究
     （1）旧版本实例化模型为：M()
          新版本实例化模型为：Model()

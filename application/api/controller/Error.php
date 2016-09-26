@@ -55,28 +55,58 @@ class Error extends Rest{
     public function user() {
         $result = true;
         $code = 404;
-        $model = db("user");
+        $data = '';
+        //定义自动验证模型
+        $validate = validate('user');
+        //实例化user模型
+        $model = model("user");
         switch ( $this->method ) {
             case "get":
-                $map = ['username' => input('get.username')];
-                $data = $model->where($map)->field('id,username,email')->find();
-                if ( !empty($data) ) {
-                    $code = 200;
-                } else {
+                $map = [
+                    'username' => input('get.username'),
+//                    'password' => input('get.password'),
+                ];
+                //自动验证
+                if ( !$validate->check($map) ) {
+                    $data = $validate->getError();
                     $result = false;
+                } else {
+                    $data = $model->where($map)->field('id,username,email')->find();
+                    if ( !empty($data) ) {
+                        $code = 200;
+                    } else {
+                        $result = false;
+                    }
                 }
+                exit;
                 break;
             case "post" :
-                $data = [
-                    'username' => input('post.username'),
-                    'password' => input('post.password'),
+                $map = [
+                    'username'      => input('post.username'),
+                    'password'      => input('post.password'),
+                    'repassword'    => input('post.repassword'),
+                    'check'    => input('post.check'),
                 ];
-                $post = $model->insert($data);
-                dump($model->get);exit;
-                if ( $post ){
+                //自动验证
+                if ( !$validate->check($map) ) {
+                    $data = $validate->getError();
+                    $result = false;
+                } else {
+                    //判断用户名是否存在
+                    if ( $model->where(['username' => $map['username']])->find() ) {
+                        $data = [
+                            'code'=> '6',
+                            'msg' => '用户名已存在',
+                        ];
+                        $result = false;
+                    } else {
+                        $post = $model->save($data);
+                        if ( $post ){
 
-                }else {
+                        }else {
 
+                        }
+                    }
                 }
                 break;
             default :

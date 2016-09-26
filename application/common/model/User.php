@@ -13,8 +13,16 @@ class User extends Model{
         return md5($value);
     }
 
-    protected function setLast_login_timeAttr()
+    protected function setLastLoginIpAttr()
     {
         return request()->ip();
+    }
+    protected function setLastLoginTimeAttr()
+    {
+        return date("Y-m-d H:i:s",time());
+    }
+    protected function setCreateTimeAttr()
+    {
+        return date("Y-m-d H:i:s",time());
     }
 }

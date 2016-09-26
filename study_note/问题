@@ -12,3 +12,6 @@
                 </Directory>
             重启apache:   /etc/init.d/apache2 restart
     官方手册：架构--》URL访问--》隐藏入口文件，不生效？？？？
+2.在进行自动完成时，表中字段含有下划线时，如last_login_ip，自动完成定义函数时名称为：
+    protected function setLastLoginTimeAttr(){}
+

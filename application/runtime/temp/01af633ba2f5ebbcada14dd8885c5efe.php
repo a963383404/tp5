@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/var/www/html/public/../application/admin/view/user/register.html";i:1474901737;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +32,7 @@
         </div>
         <h3>欢迎注册雪狐CMS</h3>
         <p>创建一个新账户</p>
-        <form class="m-t" role="form" action="{:url('api/user/')}" method="post">
+        <form class="m-t" role="form" action="<?php echo url('api/user/'); ?>" method="post">
             <div class="form-group">
                 <input type="text" name="username" class="form-control" placeholder="请输入用户名" >
             </div>
@@ -49,7 +50,7 @@
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
 
-            <p class="text-muted text-center"><small>已经有账户了？</small><a href="{:url('login')}">点此登录</a>
+            <p class="text-muted text-center"><small>已经有账户了？</small><a href="<?php echo url('login'); ?>">点此登录</a>
             </p>
 
         </form>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/var/www/html/public/../application/admin/view/user/login.html";i:1474798465;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/var/www/html/public/../application/admin/view/user/login.html";i:1474899398;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -34,12 +34,12 @@
         </div>
         <h3>欢迎使用雪狐CMS</h3>
 
-        <form class="m-t" role="form" action="register.html">
+        <form class="m-t" role="form" action="<?php echo url('api/user/'); ?>" method="get">
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="用户名" required>
+                <input type="text" name="username" class="form-control" placeholder="用户名" >
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="密码" required>
+                <input type="password" name="password" class="form-control" placeholder="密码" >
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
