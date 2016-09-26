@@ -34,5 +34,10 @@ return [
         '__dir__'    => ['controller'],
         'controller' => ['Error'],
     ],
+    // 定义Common模块的自动生成 （按照实际定义的文件名生成）
+    'common'     => [
+        '__dir__'    => ['controller','model'],
+        'model' => ['User'],
+    ],
     // 其他更多的模块定义
 ];

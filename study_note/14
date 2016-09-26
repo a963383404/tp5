@@ -53,10 +53,15 @@
         （1）直接实例化User
         （2）GET，不需要查找全部内容（“list"），因为是用来验证用户名的
             用户名通过get得到：$map['username'] = I('get.username');
+                新版本为：input('get.username')
             查询特定信息，指定字段：
                 $data = $model->where($map)->field("id,username,email")->find();
         （3）POST，注册时插入数据
             直接$post = $model->create();
+                这里重复一次：a.实例化数据库用db(),\thinkphp\library\think\db\Query.php;
+                            b.实例化模型用model();
+                            这里可以思考一个问题：二者之间是怎样实现的？（先找出对应的代码再分析）
+                上面的旧版本的用法，新版本的用法为：$model->insertGetId($data);//插入并返回对应的id
             //postman中可以直接模拟表单输入数据进行插入
             a.判断$post==false,
                 得到数据库返回的错误信息：$data = $post->getError();
@@ -106,6 +111,7 @@ thinkphp5.0正式版已公布，布局正式版，搞懂composer。
     ]
 2.参考手册：自动验证和自动完成（这节所讲内容可能并不适应新版本）
     新版本里验证已独立出来了，参考手册：验证一章
+    自动完成参考：手册--》自动完成
 3.application-->common-->model-->User.php
     (1)命名空间下添加：T('model/Auto');//PHP5.5及以上无需加
     (2)
