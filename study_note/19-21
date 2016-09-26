@@ -1,0 +1,126 @@
+1.插入用户成功后，生成cookie和session:
+    $array = array(
+        'uid' => $id,
+        'username' => $username
+    );
+    session("user",$array);//写入session中
+2.common.js
+    var target,form,query;
+    form = $('.user_form');
+    targetr = form.get(0).action;
+    query = $("input['username']").serialize+"&"+
+    $.post(target,query).success(function(data){
+        //判断代码状态给出相应的“友情提示”
+        //注册成功的跳转到首页
+    }).error(function(){
+        //友情提示“注册失败，请联系管理员”
+    });
+    return false;
+3.在bootstarp中加入模态框提示
+    用户名存在时弹出提示框“用户名已存在”提示
+    js调用，参考bootstarp官网如何使用
+第十九讲主要讲了注册成功生成session和引用bootstrap中的友情提示框。
+
+
+1.bower install js-md5
+    客户端md5加密，直接在js里md5()就能加密了
+3.引入这个js文件
+    将js里提交的密码改为md5加密
+    ？？加密后，后台怎样知道它原来是什么？？
+2.注册时，密码加密
+    在error.php中：
+        //生成随机码
+        $_POST['code'] = getRandomCode();
+        //此处I获取的密码已经在客户端加密过
+        $_POST['code'] = md5(I("password")).$_POST['code'];
+    common.php里添加：
+        //获取随机码
+        function getRadomCode() {
+            $ychar = "0,1,2,....,z";
+            $list = explode(",",$ychar);
+            $authNum = '';
+            for ($i=0;$i<6;$i++) {
+                $randNum = rand(0,35);
+                $authNum .=  $list[$randNum];
+            }
+            return $authNum;
+        }
+    数据表user中添加code字段
+第二十讲就搞了这个加密密码的代码
+
+
+1.修改login.html页面上的url地址等
+2.在common.js中添加相应的代码：
+    //get请求用户登录
+    $(".ajax_get").on("click",function(){
+
+    })
+    参考之前的post操作
+3.Error类中：
+    case 'get':
+    //判断用户名是否存在
+        用户名不存在：202
+    //配密码
+        取得相应的信息：id,username,password,code.role_id
+        生成密码后与数据库中的密码进行对比
+    //生成session
+        $array = array(
+            'uid' => $data['id'],
+            'username' => $data['username'],
+            'role_id' => $data['rode_id'],
+        );
+        session('user',$array);
+     //判断是否为管理员生成相应的地址，返回给前台
+     //密码错误：'code' => '203'
+第二十一讲 用户登录代码部分书写
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
