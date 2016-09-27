@@ -232,7 +232,8 @@ return [
 
     //输出替换
     'view_replace_str'  =>  [
-        '__PUBLIC__' => './',
+        '__PUBLIC__' => '/',
+        '__THEME__' => '/theme',
         '__BOWER__'  => '/bower_components',
         '__STATIC__' => '/static',
     ],

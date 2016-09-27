@@ -10,3 +10,12 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+ function getRandCode() {
+     $str   = "1,2,3,4,5,6,7,8,9,0,q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,,c,v,b,n,m";
+     $arr   = explode(',',$str);
+     $code  = '';
+     for ( $i = 0; $i < 6; $i++){
+        $code .= $arr[rand(0,36)];
+     }
+     return $code;
+ }

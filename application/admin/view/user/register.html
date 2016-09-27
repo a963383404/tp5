@@ -31,23 +31,23 @@
         </div>
         <h3>欢迎注册雪狐CMS</h3>
         <p>创建一个新账户</p>
-        <form class="m-t" role="form" action="{:url('api/user/')}" method="post">
+        <form class="m-t ajax_post" role="form" action="{:url('api/user/')}" method="post">
             <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="请输入用户名" >
+                <input type="text" name="username" id="username" class="form-control" placeholder="请输入用户名" required  oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="请输入密码" >
+                <input type="password" name="password" id="password" class="form-control" placeholder="请输入密码" required oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-                <input type="password" name="repassword" class="form-control" placeholder="请再次输入密码" >
+                <input type="password" name="repassword" id="repassword" class="form-control" placeholder="请再次输入密码" required oninput="setCustomValidity('')">
             </div>
             <div class="form-group text-left">
                 <div class="checkbox i-checks">
                     <label class="no-padding">
-                        <input type="checkbox" name="check" value="1"><i></i> 我同意注册协议</label>
+                        <input type="checkbox" name="check" id="check" value="1" required oninput="setCustomValidity('')"><i></i> 我同意注册协议</label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
+            <button type="submit" name="registerBtn" id="registerBtn" class="btn btn-primary block full-width m-b">注 册</button>
 
             <p class="text-muted text-center"><small>已经有账户了？</small><a href="{:url('login')}">点此登录</a>
             </p>
@@ -55,9 +55,26 @@
         </form>
     </div>
 </div>
+
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="mySmallModalLabel">友情提醒</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
 <script src="__STATIC__/js/jquery.min.js?v=2.1.4"></script>
 <script src="__STATIC__/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="__STATIC__/js/plugins/iCheck/icheck.min.js"></script>
+<script src="__STATIC__/js/common.js"></script>
+<script src="__BOWER__/js-md5/js/md5.js"></script>
 <script>
     $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
 </script>

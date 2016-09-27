@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/var/www/vcmycloud/public/../template/default/index/index.html";i:1474867012;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/var/www/vcmycloud/public/../template/default/index/index.html";i:1474961312;}*/ ?>
 <!doctype html>
 <!--[if lte IE 6 ]> <html class="ie ie6 lte_ie7 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
 <!--[if IE 7 ]> <html class="ie ie7 lte_ie7 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
@@ -13,17 +13,17 @@
     <title>StudyFoxCMS——雪狐ThinkPHP5内容管理系统</title>
 
     <!--<link rel="stylesheet" href="__BOWER__/bootstrap/dist/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="__PUBLIC__/theme/default/css/bootstrap.css">
-    <link rel="stylesheet" href="__PUBLIC__/theme/default/css/common.css">
+    <link rel="stylesheet" href="__THEME__/default/css/bootstrap.css">
+    <link rel="stylesheet" href="__THEME__/default/css/common.css">
     <link rel="stylesheet" href="__BOWER__/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/theme/default/css/main.css">
-    <link rel="stylesheet" href="__PUBLIC__/theme/default/css/style.css">
-    <link rel="stylesheet" href="__PUBLIC__/theme/default/css/index.css">
+    <link rel="stylesheet" href="__THEME__/default/css/main.css">
+    <link rel="stylesheet" href="__THEME__/default/css/style.css">
+    <link rel="stylesheet" href="__THEME__/default/css/index.css">
     <link rel="stylesheet" href="__BOWER__/Swiper/dist/css/swiper.min.css">
 
     <!--[if lt IE 9 ]>
-    <script src="__PUBLIC__/theme/default/js/html5shiv.js"></script>
-    <script src="__PUBLIC__/theme/default/js/respond.min.js"></script>
+    <script src="__THEME__/default/js/html5shiv.js"></script>
+    <script src="__THEME__/default/js/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -32,7 +32,7 @@
     <div class="container">
 
         <div class="navbar-header pull-left">
-            <a href="/" class="navbar-brand"><img src="__PUBLIC__/theme/default/images/logo.png" alt="雪狐CMS" class="img-responsive"></a>
+            <a href="/" class="navbar-brand"><img src="__THEME__/default/images/logo.png" alt="雪狐CMS" class="img-responsive"></a>
             <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -84,9 +84,9 @@
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="/"><img src="__PUBLIC__/theme/default/images/slide.jpg" alt=""></a></div>
-        <div class="swiper-slide"><a href="/"><img src="__PUBLIC__/theme/default/images/slide.jpg" alt=""></a></div>
-        <div class="swiper-slide"><a href="/"><img src="__PUBLIC__/theme/default/images/slide.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="/"><img src="__THEME__/default/images/slide.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="/"><img src="__THEME__/default/images/slide.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="/"><img src="__THEME__/default/images/slide.jpg" alt=""></a></div>
     </div>
     <!-- 如果需要分页器 -->
     <div class="swiper-pagination"></div>
@@ -106,7 +106,7 @@
 
                     <div class="course-item">
                         <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
                         </div>
                         <div class="course-info">
                             <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
@@ -114,26 +114,7 @@
                     </div>
                     <div class="course-item">
                         <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
-                        </div>
-                        <div class="course-info">
-                            <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-
-                    <div class="course-item">
-                        <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
-                        </div>
-                        <div class="course-info">
-                            <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
-                        </div>
-                    </div>
-                    <div class="course-item">
-                        <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
                         </div>
                         <div class="course-info">
                             <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
@@ -144,7 +125,7 @@
 
                     <div class="course-item">
                         <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
                         </div>
                         <div class="course-info">
                             <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
@@ -152,7 +133,7 @@
                     </div>
                     <div class="course-item">
                         <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
                         </div>
                         <div class="course-info">
                             <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
@@ -163,7 +144,7 @@
 
                     <div class="course-item">
                         <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
                         </div>
                         <div class="course-info">
                             <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
@@ -171,7 +152,26 @@
                     </div>
                     <div class="course-item">
                         <div class="course-img">
-                            <a href="/"><img src="__PUBLIC__/theme/default/images/cms.jpg" alt=""></a>
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
+                        </div>
+                        <div class="course-info">
+                            <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+
+                    <div class="course-item">
+                        <div class="course-img">
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
+                        </div>
+                        <div class="course-info">
+                            <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-img">
+                            <a href="/"><img src="__THEME__/default/images/cms.jpg" alt=""></a>
                         </div>
                         <div class="course-info">
                             <div class="title"><a href="/">雪狐Thinkphp5内容管理系统</a></div>
@@ -187,7 +187,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <a href="/"><img src="__PUBLIC__/theme/default/images/foot-logo.png" alt=""></a>
+                <a href="/"><img src="__THEME__/default/images/foot-logo.png" alt=""></a>
             </div>
             <div class="col-md-4 about">
                 <span><a href="/">关于我们</a></span>|

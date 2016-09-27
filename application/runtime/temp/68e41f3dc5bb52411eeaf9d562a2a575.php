@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/var/www/vcmycloud/public/../application/admin/view/user/login.html";i:1474867012;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/var/www/vcmycloud/public/../application/admin/view/user/login.html";i:1474969374;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -34,23 +34,39 @@
         </div>
         <h3>欢迎使用雪狐CMS</h3>
 
-        <form class="m-t" role="form" action="register.html">
+        <form class="m-t ajax-get" role="form" action="<?php echo url('api/user/'); ?>" method="get">
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="用户名" required>
+                <input type="text" name="username" id="username" class="form-control" placeholder="用户名" required oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="密码" required>
+                <input type="password" name="password" id="password" class="form-control" placeholder="密码" required oninput="setCustomValidity('')" >
             </div>
-            <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
-
+            <button type="submit" id="loginBtn" class="btn btn-primary block full-width m-b">登 录</button>
             <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="<?php echo url('register'); ?>">注册一个新账号</a>
             </p>
 
         </form>
     </div>
 </div>
+
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="mySmallModalLabel">友情提醒</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
 <script src="__STATIC__/js/jquery.min.js?v=2.1.4"></script>
 <script src="__STATIC__/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="__STATIC__/js/common.js"></script>
+<script src="__BOWER__/js-md5/js/md5.js"></script>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
 </body>
 
