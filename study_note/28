@@ -1,0 +1,196 @@
+1.优化附件配置中提交后跳转到了站点配置页面，而不是本页
+    input hidden name=tab value=1
+                               =2
+    tab 传入模板，控制器中获取加入success方法中传
+    设置页面的active
+第二十八讲修改系统配置页面BUG
+
+
+分类管理（前台的主菜单）
+    添加：controller-->Category
+        view-->category/index
+
+左侧添加菜单项：
+    将页面项复制到系统配置项下
+        内容：
+            内容管理：
+                管理内容
+            内容相关：
+                分类列表（category/index）
+                模型管理
+分类列表
+    前端页面参考“系统配置”
+        上方菜单变为：a.分类列表，b.添加分类
+        b.添加分类
+            分类名称
+            分类目录
+            所属模型
+                请选择模型（下拉列框）
+            上级分类
+                作为顶级分类（下拉列框）
+            是否终级分类：
+                添加一个复选框：终极分类 （终极分类才可以添加内容）
+第二十九讲前端页面添加
+
+
+b.添加分类                                                  字段==》分类ID：id    smallint(5) autoincrement
+    分类名称==》输入框                                       字段==》分类名称：catname varchar(30)
+    所属模型                                                字段==》模型ID：modelid   smallint(5)
+        请选择模型（下拉列框）
+    上级分类                                                字段==》父ID：parentid   smallinit(5)
+        作为顶级分类（下拉列框）
+    是否终级分类：                                           字段==》是滞存在子分类，1存在：haschild tinyint(1)
+        添加一个复选框：终极分类 （终极分类才可以添加内容）
+    分类目录==》输入框                                       字段==》分类目录：catdir varchar(30)
+    指定分类地址==》输入框，下方带提示信息（留空按默认地址访问） 字段==》链接地址：seturl varchar(100)
+    是否首页菜单显示==》单选按钮（“显示”，“不显示”）            字段==》是否菜单显示：ismenu tinyint(1) default 1
+    角色权限==》给个提示“预留”，以后再用
+    显示排序==》输入框                                       字段==》排序：listorder smallint(5) default 0;
+    提交按钮==》“提交”                                       字段==》
+第三十讲与数据库（）内容相对应添加
+
+
+“是否终极分类”的位置向后了
+    复制多了一个label
+ “是否首页菜单显示”变成横向排序
+    向后了，调整一下
+提交按钮的功能：
+    “上级分类“下节讲
+    参考config的控制器
+        _initialize()
+            $config==>$cateory
+            实例化
+        index()
+        fi
+            $data = $this->field('列出要添加的字段')->create();
+            $this->category->create();//创建数据
+            if ($this->category->add()){
+
+            }else{
+
+            }
+ 跳转不能弹出提示框原因：（最新版本应该不会出现这个问题，写法不同了）
+    没有“初始化视图类”：$this->initView();
+第三十一讲将表单的内容插入数据库
+
+
+无限级分类
+    无限级分类：common->util->Tree.php
+        定义命名空间
+    category->index():
+        引入命名空间
+        //获取无限级分类
+    haschlid == 0 ==> disabled = disabled 只能是二级结构
+    unset原来不使用的数组，减少发消
+第三十二讲 引入Tree.php,使用其生成下拉框数据
+
+
+将tree中的icon，nsb各加三个空格(在控制器中动态生成)
+“是否终级分类”中的复选框进行优化
+    在最下面的JS代码中添加：
+        $('.iCheck-helper').click(function(){
+            var str_class = $(this).parent().attr('class');
+            if (str_class.indexOf('checked')>0) {
+                //选中状态，设同级checkbox值为1
+                $(this).parent().children('input').val('1');
+            }else{
+                //未选中状态，设同级checkbox为0
+                $(this).parent.children('input').val('0');
+            }
+        })
+        在<label>中加入样式iCheck-label
+        同样进行上面代码的书写
+    结合F12来分析研究这个按钮
+第三十三讲添加分类功能完善与完成
+
+
+分类列表
+    显示--》H+表格：自定义响应式表格（参考）
+    表格内容：
+        排序 width:10%--    input->text->naem:listorder->value:0
+        分类ID 10%--  直接文字
+        分类名称 35%--直接文字
+        所属模型 20%--直接文字
+        操作25%--    图标+文字提醒（移动上去时）
+    生增admin.css，让表格文字居中
+第三十四讲分类显示静态模板书写
+
+
+分类列表中的图标进行更换
+    <a href='' title='添加子分类'>+ 修改 删除对就的图标（参考font）
+    <a href='' title='修改'>+ 修改 删除对就的图标（参考font）
+    <a href='' title='删除'>+ 修改 删除对就的图标（参考font）
+
+$tree->ret = '' ;//清空原来的数据
+
+还是用tree类来生成相应的数据
+    树形结构显示
+    有的不显示+号：<id display
+    tree里面的内容变量与转入的变量名必须一样！！
+第三十五讲读取数据库中的内容并且树形结构在表格中显示
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
