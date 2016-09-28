@@ -1,0 +1,142 @@
+H+模板搭建
+	index_v148b2.html--》content.html index.html复制这两个文件过去
+	修改路径名称
+
+	在控制器中添加访求conntent()
+		显示右侧的内容
+第二十二讲H+后台首页搭建
+
+
+	将左侧菜单栏里“工具”一项复制到最上方
+		标题“系统设置”
+			子项：“网站配置”（config/index）
+		网站配置：
+			table-panels,复制进来
+			只保留：“第一个选项卡”和“第二个选项卡”
+			将左右改为全屏，row-6改为row-12
+			(1)站点配置
+			(2)附件配置
+		站点配置：
+			form_basic.html:参考里面的“普通”表单
+			（1）站点名称
+			（2）关键字：
+			（3）描述：
+				换成多文本框，textarea style="height:100px"
+			（4）验证码类型
+				下拉框：“select"
+			（5）提交按钮：”提交“
+				参考”保存内容“按钮
+第二十三讲：系统设置（站点配置页面搭建）
+
+
+	数据库中添加配置表：sofx_config
+		id	varname	info	value
+			sitname	站点名称 111
+	name='sitname'
+	name='sitkeywords'
+	name='sitinfo'
+	name='checkcode_type'
+		字母数字混合	0
+		纯字母			1
+		纯数字			2
+
+建表SQL语句：
+	create table sfox_config(
+       id INT NOT NULL AUTO_INCREMENT,
+       varname VARCHAR(32) NOT NULL,
+       info text default '',
+       value text default '',
+       PRIMARY KEY ( id )
+    )ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 ;
+    insert into sfox_config (varname,info)values('sitname','站点名称'),('sitkeywords','关键字'),('sitinfo','描述'),('checkcode_type','验证码');
+    insert into sfox_config (varname,info)values('uploadfilemax','文件大小限制'),('uploadfiletype','文件类型'),('watermark','是否打水印');
+
+
+	在COnfig中添加初始化方法
+		private $config = null
+
+		protected function _initialize(){
+			$this->config = D("common/config")
+			$this->site	= $configList = $this->config->getField('varname,value);
+			$this->assign("site",$configList),
+		}
+	在模板中显示出上面提取到的信息
+		下拉框里
+			{$site.checkcode_type == 0 ? 'selected' : ''}
+第二十四讲 数据表添加和读取显示
+
+conifg-->inde（）
+	if (IS_POST) {
+		if ( $this->config->saveConfig($_POST) ){
+			$this->success("更新成功");//这个无法显示的，以后再修正
+		} else {
+			$this->error("更新失败");
+		}
+	} else {
+
+	}
+在common-->mode-->config.php里添加saveConfig($data)
+	(1)先判断$data是否为空，并且为数组，否则
+		return false;
+	(2)循环插入相应的数据
+		选判断值是否为空，空的话就不插入了，跳出本次循环
+		$savaData = array();
+		$savaData['value'] = trim($value);
+		if (false === $this->where()->update()){
+			return false
+		}
+		return true
+第二十五讲 更新数据
+
+
+
+$this->success()需要前面加return才能跳转
+layer插件
+	参考H+弹框插件
+原来官方success页面位置：(应该可以自己设置的)
+	thinkphp->tpl-->dispatch_jump.tpl
+layer使用：
+		引入jquery和layer.js
+		定义三个input hidden用来放url,msg,wait
+		layer.open
+		背景颜色也改为跟H+一样
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

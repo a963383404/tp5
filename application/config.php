@@ -237,4 +237,5 @@ return [
         '__BOWER__'  => '/bower_components',
         '__STATIC__' => '/static',
     ],
+
 ];

@@ -25,8 +25,8 @@ return [
     'admin'     => [
         '__file__'   => ['common.php'],
         '__dir__'    => ['behavior', 'controller', 'model','view'],
-        'controller' => ['Index','User'],
-        'view'       => ['index/index','user/register','user/login']
+        'controller' => ['Index','User',"Config"],
+        'view'       => ['index/index','index/jump','user/register','user/login','config/index']
     ],
     // 定义index模块的自动生成 （按照实际定义的文件名生成）
     'api'     => [
@@ -37,7 +37,7 @@ return [
     // 定义Common模块的自动生成 （按照实际定义的文件名生成）
     'common'     => [
         '__dir__'    => ['controller','model','validate'],
-        'model' => ['User'],
+        'model' => ['User','Config'],
         'validate' => ['User'],
     ],
     // 其他更多的模块定义

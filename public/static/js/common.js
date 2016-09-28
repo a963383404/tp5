@@ -66,14 +66,14 @@ $(function(){
     $("#loginBtn").on("click",function(){
         var username = document.getElementById("username"),
             password = document.getElementById("password");
-        /*if ( username.value == '' ) {
+        if ( username.value == '' ) {
             username.setCustomValidity("用户名不能为空");
             return;
         }
         if ( password.value == '' ) {
             password.setCustomValidity("密码不能为空");
             return;
-        }*/
+        }
         var form,target,query;
         form    = $(".ajax-get");
         target  = form.get(0).action;
