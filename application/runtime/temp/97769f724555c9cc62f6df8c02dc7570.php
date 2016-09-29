@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/vcmycloud/public/../application/admin/view/index/index.html";i:1475033066;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/vcmycloud/public/../application/admin/view/index/index.html";i:1475119848;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,6 +60,27 @@
                     <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">系统设置 </span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="<?php echo url('config/index'); ?>">网站配置</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">内容</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li class="">
+                            <a href="#">内容管理 <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level collapse" aria-expanded="false" style="height: 0px;">
+                                <li><a class="J_menuItem" href="#" data-index="35">管理内容</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#">内容相关 <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level collapse" aria-expanded="false" style="height: 0px;">
+                                <li><a class="J_menuItem" href="<?php echo url('category/index'); ?>" data-index="35">分类列表</a>
+                                </li>
+                                <li><a class="J_menuItem" href="#" data-index="36">模型管理</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

@@ -14,4 +14,16 @@
     官方手册：架构--》URL访问--》隐藏入口文件，不生效？？？？
 2.在进行自动完成时，表中字段含有下划线时，如last_login_ip，自动完成定义函数时名称为：
     protected function setLastLoginTimeAttr(){}
+3.获取url参数问题
+    方式1：http://172.16.231.128:9090/admin/config/index/tab/2，input('get.tab')获取不到值
+    方式2：http://172.16.231.128:9090/admin/config/index?tab=2，input('get.tab')能得到到值
+    为什么用”方式1“获取不到值？
+        忘记get和post，用request()->param('tab')来获取相应的参数
+        或者使用助手函数：input("param.tab)";
+3.直接插入表单发过来的数据进，有时会弹出字段不存在
+    解决：
+        （1）// 是否严格检查字段是否存在
+           'fields_strict'  => true,//修改为false就不检测了
+        （2）动态修改
+            db()->strict(false)->insertGetId();
 

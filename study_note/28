@@ -3,6 +3,11 @@
                                =2
     tab 传入模板，控制器中获取加入success方法中传
     设置页面的active
+问题：
+    方式1：http://172.16.231.128:9090/admin/config/index/tab/2，input('get.tab')获取不到值
+    方式2：http://172.16.231.128:9090/admin/config/index?tab=2，input('get.tab')能得到到值
+    为什么用”方式1“获取不到值？
+        忘记get和post，用request()->param('tab')来获取相应的参数
 第二十八讲修改系统配置页面BUG
 
 
@@ -47,8 +52,20 @@ b.添加分类                                                  字段==》分�
     角色权限==》给个提示“预留”，以后再用
     显示排序==》输入框                                       字段==》排序：listorder smallint(5) default 0;
     提交按钮==》“提交”                                       字段==》
+"作为顶级分类"前后那三橫怎样加上的
 第三十讲与数据库（）内容相对应添加
 
+create table sfox_category(
+    id smallint(5) NOT NULL AUTO_INCREMENT,
+    catname varchar(30) default '',
+    modelid smallint(5),
+    parentid smallint(5) default '0',
+    haschild tinyint(1) default '0',
+    catdir varchar(30) default '',
+    ismenu tinyint(1) default '1',
+    listorder smallint(5) default '0',
+    PRIMARY KEY ( id )
+)ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 ;
 
 “是否终极分类”的位置向后了
     复制多了一个label

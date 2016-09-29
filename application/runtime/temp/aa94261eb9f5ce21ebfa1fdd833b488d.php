@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/var/www/vcmycloud/public/../application/admin/view/config/index.html";i:1475047231;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/var/www/vcmycloud/public/../application/admin/view/config/index.html";i:1475118640;}*/ ?>
 <html><!-- Mirrored from www.zi-han.net/theme/hplus/tabs_panels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT --><head>
 
     <meta charset="utf-8">
@@ -23,16 +23,16 @@
         <div class="col-sm-12">
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 站点配置</a>
+                    <li class="<?php if($tab != 2): ?>active<?php endif; ?>"><a data-toggle="tab" href="#tab-1" aria-expanded="<?php if($tab != 2): ?>true<?php else: ?>false<?php endif; ?>"> 站点配置</a>
                     </li>
-                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">附件配置</a>
+                    <li class="<?php if($tab == 2): ?>active<?php endif; ?>"><a data-toggle="tab" href="#tab-2" aria-expanded="<?php if($tab == 2): ?>true<?php else: ?>false<?php endif; ?>">附件配置</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane active">
+                    <div id="tab-1" class="tab-pane <?php if($tab != 2): ?>active<?php endif; ?>" >
                         <div class="panel-body">
                             <div class="ibox-content">
-                                <form method="post" class="form-horizontal" action="<?php echo url('update'); ?>">
+                                <form method="post" class="form-horizontal" action="<?php echo url(''); ?>">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">站点名称</label>
 
@@ -75,9 +75,10 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane">
+                    <div id="tab-2" class="tab-pane <?php if($tab == 2): ?>active<?php endif; ?>">
                         <div class="panel-body">
-                            <form method="post" class="form-horizontal" action="<?php echo url('update'); ?>">
+                            <form method="post" class="form-horizontal" action="<?php echo url('index'); ?>">
+                                <input type="hidden" name="tab" value="2">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">文件大小限制</label>
 

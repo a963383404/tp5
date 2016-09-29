@@ -22,16 +22,16 @@
         <div class="col-sm-12">
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 站点配置</a>
+                    <li class="{if $tab != 2 }active{/if}"><a data-toggle="tab" href="#tab-1" aria-expanded="{if $tab != 2 }true{else/}false{/if}"> 站点配置</a>
                     </li>
-                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">附件配置</a>
+                    <li class="{if $tab == 2 }active{/if}"><a data-toggle="tab" href="#tab-2" aria-expanded="{if $tab == 2 }true{else/}false{/if}">附件配置</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane active">
+                    <div id="tab-1" class="tab-pane {if $tab != 2 }active{/if}" >
                         <div class="panel-body">
                             <div class="ibox-content">
-                                <form method="post" class="form-horizontal" action="{:url('update')}">
+                                <form method="post" class="form-horizontal" action="{:url('')}">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">站点名称</label>
 
@@ -74,9 +74,10 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane">
+                    <div id="tab-2" class="tab-pane {if $tab == 2 }active{/if}">
                         <div class="panel-body">
-                            <form method="post" class="form-horizontal" action="{:url('update')}">
+                            <form method="post" class="form-horizontal" action="{:url('index')}">
+                                <input type="hidden" name="tab" value="2">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">文件大小限制</label>
 

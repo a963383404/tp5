@@ -25,8 +25,8 @@ return [
     'admin'     => [
         '__file__'   => ['common.php'],
         '__dir__'    => ['behavior', 'controller', 'model','view'],
-        'controller' => ['Index','User',"Config"],
-        'view'       => ['index/index','index/jump','user/register','user/login','config/index']
+        'controller' => ['Index','User',"Config","Category"],
+        'view'       => ['index/index','index/jump','user/register','user/login','config/index',"category/index"]
     ],
     // 定义index模块的自动生成 （按照实际定义的文件名生成）
     'api'     => [
