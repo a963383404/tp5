@@ -22574,3 +22574,3818 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2016-09-29T19:59:18+08:00 ] 172.17.0.2 192.168.1.103 GET /
+[ log ] 192.168.1.107:9097/ [运行时间：0.169708s][吞吐率：5.89req/s] [内存消耗：547.03kb] [文件加载：52]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/index/controller/Index.php 5 - 7
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/default/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:20+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/user/login
+[ log ] 192.168.1.107:9097/admin/user/login [运行时间：0.013264s][吞吐率：75.39req/s] [内存消耗：520.84kb] [文件加载：52]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ /var/www/html/application/admin/controller/User.php 7 - 9
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/user/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:20+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/user/favicon.ico
+[ log ] 192.168.1.107:9097/admin/user/favicon.ico [运行时间：0.017452s][吞吐率：57.30req/s] [内存消耗：443.86kb] [文件加载：51]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'favicon',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:25+08:00 ] 172.17.0.2 192.168.1.103 GET /api/user/?username=admin&password=21232f297a57a5a743894a0e4a801fc3
+[ log ] 192.168.1.107:9097/api/user/?username=admin&password=21232f297a57a5a743894a0e4a801fc3 [运行时间：0.059924s][吞吐率：16.69req/s] [内存消耗：666.74kb] [文件加载：52]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '21232f297a57a5a743894a0e4a801fc3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user, overwrites think\controller\Rest, prototype think\controller\Rest> public method _empty ] {
+  @@ /var/www/html/application/api/controller/Error.php 15 - 53
+
+  - Parameters [1] {
+    Parameter #0 [ <required> $name ]
+  }
+}
+
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009335s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_user` [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`code`,`role_id` FROM `sfox_user` WHERE  `username` = 'admin' LIMIT 1    [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_user` WHERE  `username` = 'admin'  AND `password` = '6d9768ead1e83eea733a8d9cac8aaefa' LIMIT 1     [ RunTime:0.000253s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:25+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.004166s][吞吐率：240.03req/s] [内存消耗：653.56kb] [文件加载：52]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:25+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.019904s][吞吐率：50.24req/s] [内存消耗：539.13kb] [文件加载：51]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:25+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/favicon.ico
+[ log ] 192.168.1.107:9097/admin/favicon.ico [运行时间：0.003838s][吞吐率：260.56req/s] [内存消耗：385.34kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'favicon',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T19:59:31+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.010376s][吞吐率：96.38req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:01:49+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.021343s][吞吐率：46.85req/s] [内存消耗：652.06kb] [文件加载：52]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:01:49+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.017073s][吞吐率：58.57req/s] [内存消耗：539.52kb] [文件加载：51]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:01:49+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.006803s][吞吐率：146.99req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:01:49+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.007062s][吞吐率：141.60req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:01:53+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/config/index
+[ log ] 192.168.1.107:9097/admin/config/index [运行时间：0.021782s][吞吐率：45.91req/s] [内存消耗：927.14kb] [文件加载：59]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Config.php 16 - 29
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/config/index.html [ array (
+  0 => 'site',
+  1 => 'tab',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001258s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_config` [ RunTime:0.000923s ]
+[ sql ] [ SQL ] SELECT `varname`,`value` FROM `sfox_config`  [ RunTime:0.000174s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:01:53+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003671s][吞吐率：272.41req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:33+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/config/index
+[ log ] 192.168.1.107:9097/admin/config/index [运行时间：0.045457s][吞吐率：22.00req/s] [内存消耗：733.13kb] [文件加载：60]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/config/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '272',
+)
+[ info ] [ PARAM ] array (
+  'sitname' => '网站名称',
+  'sitkeywords' => '好好学习，慢慢学，不断学',
+  'sitinfo' => '不断向上，不能放弃',
+  'checkcode_type' => '0',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Config.php 16 - 29
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'site',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002904s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_config` [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT `varname`,`value` FROM `sfox_config`  [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'sitname' LIMIT 1    [ RunTime:0.000255s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='网站名称'  WHERE  `varname` = 'sitname'     [ RunTime:0.013206s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'sitkeywords' LIMIT 1    [ RunTime:0.000261s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='好好学习，慢慢学，不断学'  WHERE  `varname` = 'sitkeywords'     [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'sitinfo' LIMIT 1    [ RunTime:0.000205s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='不断向上，不能放弃'  WHERE  `varname` = 'sitinfo'     [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'checkcode_type' LIMIT 1    [ RunTime:0.000204s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='0'  WHERE  `varname` = 'checkcode_type'     [ RunTime:0.000213s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:33+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/config/index
+[ log ] 192.168.1.107:9097/admin/config/index [运行时间：0.011184s][吞吐率：89.41req/s] [内存消耗：687.09kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/config/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '272',
+)
+[ info ] [ PARAM ] array (
+  'sitname' => '网站名称',
+  'sitkeywords' => '好好学习，慢慢学，不断学',
+  'sitinfo' => '不断向上，不能放弃',
+  'checkcode_type' => '0',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Config.php 16 - 29
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'site',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003118s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_config` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT `varname`,`value` FROM `sfox_config`  [ RunTime:0.001173s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'sitname' LIMIT 1    [ RunTime:0.000207s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='网站名称'  WHERE  `varname` = 'sitname'     [ RunTime:0.000153s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'sitkeywords' LIMIT 1    [ RunTime:0.000133s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='好好学习，慢慢学，不断学'  WHERE  `varname` = 'sitkeywords'     [ RunTime:0.000121s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'sitinfo' LIMIT 1    [ RunTime:0.000188s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='不断向上，不能放弃'  WHERE  `varname` = 'sitinfo'     [ RunTime:0.000142s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_config` WHERE  `varname` = 'checkcode_type' LIMIT 1    [ RunTime:0.000150s ]
+[ sql ] [ SQL ] UPDATE `sfox_config`  SET `value`='0'  WHERE  `varname` = 'checkcode_type'     [ RunTime:0.000121s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:36+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/config/index
+[ log ] 192.168.1.107:9097/admin/config/index [运行时间：0.008678s][吞吐率：115.23req/s] [内存消耗：864.41kb] [文件加载：57]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/config/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Config.php 16 - 29
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/config/index.html [ array (
+  0 => 'site',
+  1 => 'tab',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000510s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_config` [ RunTime:0.001112s ]
+[ sql ] [ SQL ] SELECT `varname`,`value` FROM `sfox_config`  [ RunTime:0.000204s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:37+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003276s][吞吐率：305.26req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:44+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.003650s][吞吐率：273.96req/s] [内存消耗：510.41kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:44+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003249s][吞吐率：307.77req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:44+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.002492s][吞吐率：401.29req/s] [内存消耗：469.13kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:44+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003993s][吞吐率：250.45req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:48+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.015710s][吞吐率：63.65req/s] [内存消耗：687.97kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003016s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001669s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000526s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:02:48+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003004s][吞吐率：332.91req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:03:20+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.010777s][吞吐率：92.79req/s] [内存消耗：619.73kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '119',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+  'catname' => '前端知识',
+  'modelid' => '0',
+  'parentid' => '0',
+  'haschild' => '1',
+  'catdir' => '',
+  'seturl' => '',
+  'ismenu' => '1',
+  'listorder' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'tab',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001191s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] INSERT INTO `sfox_category` (`catname` , `modelid` , `parentid` , `haschild` , `catdir` , `ismenu` , `listorder`) VALUES ('前端知识' , 0 , 0 , 1 , '' , 1 , 1)         [ RunTime:0.000285s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:03:23+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index/tab/2
+[ log ] 192.168.1.107:9097/admin/category/index/tab/2 [运行时间：0.009621s][吞吐率：103.94req/s] [内存消耗：620.58kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000551s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001288s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000347s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:03:23+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002840s][吞吐率：352.11req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:03:49+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.009371s][吞吐率：106.71req/s] [内存消耗：616.80kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index/tab/2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '79',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+  'catname' => 'Jquery',
+  'modelid' => '0',
+  'parentid' => '36',
+  'catdir' => '',
+  'seturl' => '',
+  'ismenu' => '1',
+  'listorder' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'tab',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001989s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001050s ]
+[ sql ] [ SQL ] INSERT INTO `sfox_category` (`catname` , `modelid` , `parentid` , `catdir` , `ismenu` , `listorder`) VALUES ('Jquery' , 0 , 36 , '' , 1 , 1)        [ RunTime:0.000277s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:03:50+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index/tab/2
+[ log ] 192.168.1.107:9097/admin/category/index/tab/2 [运行时间：0.005413s][吞吐率：184.74req/s] [内存消耗：620.10kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000454s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000170s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:03:51+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003357s][吞吐率：297.89req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:13+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.007561s][吞吐率：132.26req/s] [内存消耗：616.80kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index/tab/2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '82',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+  'catname' => 'bootstrap',
+  'modelid' => '0',
+  'parentid' => '36',
+  'catdir' => '',
+  'seturl' => '',
+  'ismenu' => '1',
+  'listorder' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'tab',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001555s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] INSERT INTO `sfox_category` (`catname` , `modelid` , `parentid` , `catdir` , `ismenu` , `listorder`) VALUES ('bootstrap' , 0 , 36 , '' , 1 , 2)        [ RunTime:0.000252s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:16+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index/tab/2
+[ log ] 192.168.1.107:9097/admin/category/index/tab/2 [运行时间：0.008605s][吞吐率：116.21req/s] [内存消耗：620.17kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000610s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000539s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:16+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003033s][吞吐率：329.69req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:33+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.006098s][吞吐率：163.99req/s] [内存消耗：617.80kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index/tab/2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '86',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+  'catname' => 'PHP',
+  'modelid' => '0',
+  'parentid' => '0',
+  'haschild' => '1',
+  'catdir' => '',
+  'seturl' => '',
+  'ismenu' => '1',
+  'listorder' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'tab',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001111s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000730s ]
+[ sql ] [ SQL ] INSERT INTO `sfox_category` (`catname` , `modelid` , `parentid` , `haschild` , `catdir` , `ismenu` , `listorder`) VALUES ('PHP' , 0 , 0 , 1 , '' , 1 , 1)         [ RunTime:0.000204s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:34+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index/tab/2
+[ log ] 192.168.1.107:9097/admin/category/index/tab/2 [运行时间：0.009772s][吞吐率：102.33req/s] [内存消耗：620.23kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000894s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001937s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000247s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:34+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003682s][吞吐率：271.60req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:51+08:00 ] 172.17.0.2 192.168.1.103 POST /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.011748s][吞吐率：85.12req/s] [内存消耗：617.80kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://192.168.1.107:9097',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index/tab/2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '88',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+  'catname' => 'Mysql',
+  'modelid' => '0',
+  'parentid' => '0',
+  'haschild' => '1',
+  'catdir' => '',
+  'seturl' => '',
+  'ismenu' => '1',
+  'listorder' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../template/dispatch_jump.html [ array (
+  0 => 'tab',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001763s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] INSERT INTO `sfox_category` (`catname` , `modelid` , `parentid` , `haschild` , `catdir` , `ismenu` , `listorder`) VALUES ('Mysql' , 0 , 0 , 1 , '' , 1 , 3)         [ RunTime:0.000197s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:52+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index/tab/2
+[ log ] 192.168.1.107:9097/admin/category/index/tab/2 [运行时间：0.010191s][吞吐率：98.13req/s] [内存消耗：620.28kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+  'tab' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000614s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001405s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000462s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:04:52+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003032s][吞吐率：329.79req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:52+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.013374s][吞吐率：74.77req/s] [内存消耗：508.70kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:52+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.002873s][吞吐率：348.08req/s] [内存消耗：467.38kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:52+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003942s][吞吐率：253.68req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:52+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003115s][吞吐率：321.03req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:56+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.008102s][吞吐率：123.43req/s] [内存消耗：687.05kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000894s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001323s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000232s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:56+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/admin.css
+[ log ] 192.168.1.107:9097/static/css/admin.css [运行时间：0.003290s][吞吐率：303.94req/s] [内存消耗：376.95kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/category/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:23:56+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003480s][吞吐率：287.36req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:24:34+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.005853s][吞吐率：170.85req/s] [内存消耗：508.70kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:24:34+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.007651s][吞吐率：130.70req/s] [内存消耗：467.38kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:24:34+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003219s][吞吐率：310.67req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:24:34+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004075s][吞吐率：245.40req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:24:37+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.007425s][吞吐率：134.68req/s] [内存消耗：620.48kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000568s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000230s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:24:37+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003511s][吞吐率：284.82req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:36:20+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.009568s][吞吐率：104.52req/s] [内存消耗：687.09kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000174s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:36:20+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003181s][吞吐率：314.37req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:36:37+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.011910s][吞吐率：83.96req/s] [内存消耗：687.09kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000869s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001368s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000211s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:36:37+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003135s][吞吐率：318.98req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:36:52+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.008969s][吞吐率：111.49req/s] [内存消耗：687.08kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000537s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001111s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000181s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:36:52+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003511s][吞吐率：284.82req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:38:15+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.027568s][吞吐率：36.27req/s] [内存消耗：508.70kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:38:15+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.003492s][吞吐率：286.36req/s] [内存消耗：467.38kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:38:15+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.009874s][吞吐率：101.27req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:38:15+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003306s][吞吐率：302.49req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:38:20+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.016208s][吞吐率：61.70req/s] [内存消耗：620.48kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001281s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.002502s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000616s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:38:20+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003184s][吞吐率：314.09req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:39:15+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.012559s][吞吐率：79.62req/s] [内存消耗：619.70kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000775s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001512s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000265s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:39:15+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004626s][吞吐率：216.18req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:12+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.005927s][吞吐率：168.72req/s] [内存消耗：619.70kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000437s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000137s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:12+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003050s][吞吐率：327.86req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:46+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.009707s][吞吐率：103.02req/s] [内存消耗：508.70kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:47+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.010115s][吞吐率：98.86req/s] [内存消耗：467.38kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:47+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.008057s][吞吐率：124.12req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:47+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004498s][吞吐率：222.32req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:52+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.006026s][吞吐率：165.95req/s] [内存消耗：619.70kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000377s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000114s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:40:52+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003154s][吞吐率：317.05req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:41:27+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.008930s][吞吐率：111.98req/s] [内存消耗：508.70kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/user/login',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:41:27+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.002457s][吞吐率：406.98req/s] [内存消耗：467.38kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:41:27+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004432s][吞吐率：225.63req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:41:27+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003765s][吞吐率：265.60req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:41:30+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.015335s][吞吐率：65.21req/s] [内存消耗：619.70kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001036s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.002262s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000355s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:41:30+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003404s][吞吐率：293.78req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:43:27+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.013563s][吞吐率：73.73req/s] [内存消耗：619.70kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002013s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000206s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:43:27+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004999s][吞吐率：200.04req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:43:48+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.009051s][吞吐率：110.48req/s] [内存消耗：687.09kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001464s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000162s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:43:48+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002859s][吞吐率：349.79req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:44:14+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.009181s][吞吐率：108.92req/s] [内存消耗：620.48kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000440s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.002672s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000169s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:44:14+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003250s][吞吐率：307.68req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:45:39+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.010322s][吞吐率：96.88req/s] [内存消耗：508.49kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:45:39+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002888s][吞吐率：346.26req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:45:39+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.002128s][吞吐率：469.90req/s] [内存消耗：467.14kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:45:39+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003862s][吞吐率：258.94req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:45:40+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.009004s][吞吐率：111.06req/s] [内存消耗：687.59kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001582s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001657s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000163s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:45:40+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003043s][吞吐率：328.60req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:46:22+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.012967s][吞吐率：77.12req/s] [内存消耗：687.74kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002013s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.002282s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000256s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:46:22+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003776s][吞吐率：264.84req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:47:05+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.013418s][吞吐率：74.53req/s] [内存消耗：687.80kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001517s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000124s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:47:05+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003130s][吞吐率：319.49req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:50:05+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.007739s][吞吐率：129.21req/s] [内存消耗：687.80kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 49
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000596s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000219s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T20:50:05+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003042s][吞吐率：328.73req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T20:57:01+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.011763s][吞吐率：85.01req/s] [内存消耗：564.43kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; think_var=zh; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 63
+}
+
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000979s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001962s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000338s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:00:50+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.011269s][吞吐率：88.74req/s] [内存消耗：700.42kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 65
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000573s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001043s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000197s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:00:50+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002952s][吞吐率：338.74req/s] [内存消耗：377.62kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:03:40+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.012603s][吞吐率：79.35req/s] [内存消耗：630.60kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 66
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000275s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:03:40+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003290s][吞吐率：303.94req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:10:12+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.011561s][吞吐率：86.50req/s] [内存消耗：630.30kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 66
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000655s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001426s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000254s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:10:12+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002800s][吞吐率：357.14req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:15:59+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.005293s][吞吐率：188.92req/s] [内存消耗：630.49kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 66
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000362s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000110s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:15:59+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003075s][吞吐率：325.19req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:16:16+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.005821s][吞吐率：171.79req/s] [内存消耗：508.49kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:16:16+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003013s][吞吐率：331.88req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:16:16+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.002892s][吞吐率：345.78req/s] [内存消耗：467.14kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:16:16+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003407s][吞吐率：293.51req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:16:22+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.015159s][吞吐率：65.97req/s] [内存消耗：628.15kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 66
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001291s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.003471s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000148s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:16:22+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.003049s][吞吐率：327.96req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:23:09+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.013898s][吞吐率：71.95req/s] [内存消耗：630.52kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 67
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000733s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001682s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000271s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:23:09+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002911s][吞吐率：343.51req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:24:55+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.025007s][吞吐率：39.99req/s] [内存消耗：596.98kb] [文件加载：58]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 67
+}
+
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000576s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.001350s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000231s ]
+[ error ] [8]Undefined variable: style[/var/www/html/application/common/util/Tree.php(128) : eval()'d code:13]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:25:11+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.011467s][吞吐率：87.21req/s] [内存消耗：630.52kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 67
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001949s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.002013s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:25:11+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004143s][吞吐率：241.37req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T21:28:25+08:00 ] 172.17.0.2 192.168.1.103 GET /admin/category/index
+[ log ] 192.168.1.107:9097/admin/category/index [运行时间：0.023269s][吞吐率：42.98req/s] [内存消耗：630.56kb] [文件加载：56]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Category.php 18 - 68
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/category/index.html [ array (
+  0 => 'tab',
+  1 => 'opts',
+  2 => 'trs',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002485s ] mysql:dbname=tp5;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfox_category` [ RunTime:0.002177s ]
+[ sql ] [ SQL ] SELECT * FROM `sfox_category`  [ RunTime:0.000879s ]
+
+---------------------------------------------------------------
+[ 2016-09-29T21:28:25+08:00 ] 172.17.0.2 192.168.1.103 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.002883s][吞吐率：346.87req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

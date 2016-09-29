@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/var/www/html/public/../application/admin/view/index/content.html";i:1475150488;}*/ ?>
 <!DOCTYPE html>
 <html>
 

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/public/../application/admin/view/index/index.html";i:1475150487;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +59,7 @@
                 <li>
                     <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">系统设置 </span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="{:url('config/index')}">网站配置</a>
+                        <li><a class="J_menuItem" href="<?php echo url('config/index'); ?>">网站配置</a>
                         </li>
                     </ul>
                 </li>
@@ -75,7 +76,7 @@
                         <li class="">
                             <a href="#">内容相关 <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level collapse" aria-expanded="false" style="height: 0px;">
-                                <li><a class="J_menuItem" href="{:url('category/index')}" data-index="35">分类列表</a>
+                                <li><a class="J_menuItem" href="<?php echo url('category/index'); ?>" data-index="35">分类列表</a>
                                 </li>
                                 <li><a class="J_menuItem" href="#" data-index="36">模型管理</a>
                                 </li>
@@ -525,7 +526,7 @@
             <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="{:url('content')}" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="<?php echo url('content'); ?>" frameborder="0" data-id="index_v1.html" seamless></iframe>
         </div>
         <div class="footer">
             <div class="pull-right">&copy; 2016-2018 <a href="http://www.studyfox.cn/" target="_blank">StudyFox.cn</a>

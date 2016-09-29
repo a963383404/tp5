@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/var/www/html/public/../application/admin/view/category/index.html";i:1475154025;}*/ ?>
 <html><!-- Mirrored from www.zi-han.net/theme/hplus/tabs_panels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT --><head>
 
     <meta charset="utf-8">
@@ -24,16 +25,16 @@
         <div class="col-sm-12">
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
-                    <li class="{if $tab != 2 }active{/if}"><a data-toggle="tab" href="#tab-1" aria-expanded="{if $tab != 2 }true{else/}false{/if}">分类列表</a>
+                    <li class="<?php if($tab != 2): ?>active<?php endif; ?>"><a data-toggle="tab" href="#tab-1" aria-expanded="<?php if($tab != 2): ?>true<?php else: ?>false<?php endif; ?>">分类列表</a>
                     </li>
-                    <li class="{if $tab == 2 }active{/if}"><a data-toggle="tab" href="#tab-2" aria-expanded="{if $tab == 2 }true{else/}false{/if}">模型管理</a>
+                    <li class="<?php if($tab == 2): ?>active<?php endif; ?>"><a data-toggle="tab" href="#tab-2" aria-expanded="<?php if($tab == 2): ?>true<?php else: ?>false<?php endif; ?>">模型管理</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane {if $tab != 2 }active{/if}" >
+                    <div id="tab-1" class="tab-pane <?php if($tab != 2): ?>active<?php endif; ?>" >
                         <div class="panel-body">
                             <div class="ibox-content">
-                                <form method="post" class="form-horizontal" action="{:url('')}">
+                                <form method="post" class="form-horizontal" action="<?php echo url(''); ?>">
 
                                     <div class="table-responsive">
                                         <table class="table table-striped">
@@ -47,7 +48,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            {$trs}
+                                            <?php echo $trs; ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -57,9 +58,9 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane {if $tab == 2 }active{/if}">
+                    <div id="tab-2" class="tab-pane <?php if($tab == 2): ?>active<?php endif; ?>">
                         <div class="panel-body">
-                            <form method="post" class="form-horizontal" action="{:url('index')}">
+                            <form method="post" class="form-horizontal" action="<?php echo url('index'); ?>">
                                 <div class="hr-line-dashed"></div>
                                 <input type="hidden" name="tab" value="2">
                                 <div class="form-group">
@@ -85,7 +86,7 @@
                                     <div class="col-sm-10">
                                         <select class="form-control m-b" name="parentid">
                                             <option value="0" >≡ 作为顶级分类 ≡</option>
-                                            {$opts}
+                                            <?php echo $opts; ?>
                                         </select>
                                     </div>
                                 </div>

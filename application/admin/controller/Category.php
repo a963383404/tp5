@@ -29,6 +29,8 @@ class Category extends Controller
             foreach ($arr as $k => $v) {
                 $newArr[$v['id']] = $v;
                 $newArr[$v['id']]['disabled'] = $v['haschild'] != 1 ?   'disabled' : '';
+                $newArr[$v['id']]['hidden'] = $v['haschild'] != 1 ?   'class="hidden"' : '';
+                $newArr[$v['id']]['nbsp'] = $v['haschild'] != 1 ?   '&nbsp;&nbsp;&nbsp;' : '';
             }
             unset($arr);
 
@@ -43,7 +45,24 @@ class Category extends Controller
 
 //            dump($opts);exit;
 
+            $tr         = "<tr>
+                                <td>
+                                    <input class='form-constrol col-sm-12' type='text' name='listorder' value='\$listorder'>
+                                </td>
+                                <td>\$id</td>
+                                <td>\$catname</td>
+                                <td>\$modelid</td>
+                                <td>
+                                    <a href='http://baidu.com' title='添加分类' \$hidden><i class='fa fa-plus text-navy'></i></a>\$nbsp &nbsp;&nbsp;&nbsp;
+                                    <a href='http://baidu.com' title='编辑分类'><i class='fa fa-pencil text-navy'></i></a>&nbsp;&nbsp;&nbsp;
+                                    <a href='http://baidu.com' title='删除分类'><i class='fa fa-trash text-navy'></i></a>
+                                </td>
+                           </tr>";
+            $tree->ret  = '';
+            $trs        = $tree->get_tree(0,$tr);
+
             $this->assign('opts',$opts);
+            $this->assign('trs',$trs);
             return $this->fetch();
         }
     }

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/var/www/html/public/../application/admin/view/config/index.html";i:1475150488;}*/ ?>
 <html><!-- Mirrored from www.zi-han.net/theme/hplus/tabs_panels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT --><head>
 
     <meta charset="utf-8">
@@ -23,44 +24,44 @@
         <div class="col-sm-12">
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
-                    <li class="{if $tab != 2 }active{/if}"><a data-toggle="tab" href="#tab-1" aria-expanded="{if $tab != 2 }true{else/}false{/if}"> 站点配置</a>
+                    <li class="<?php if($tab != 2): ?>active<?php endif; ?>"><a data-toggle="tab" href="#tab-1" aria-expanded="<?php if($tab != 2): ?>true<?php else: ?>false<?php endif; ?>"> 站点配置</a>
                     </li>
-                    <li class="{if $tab == 2 }active{/if}"><a data-toggle="tab" href="#tab-2" aria-expanded="{if $tab == 2 }true{else/}false{/if}">附件配置</a>
+                    <li class="<?php if($tab == 2): ?>active<?php endif; ?>"><a data-toggle="tab" href="#tab-2" aria-expanded="<?php if($tab == 2): ?>true<?php else: ?>false<?php endif; ?>">附件配置</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane {if $tab != 2 }active{/if}" >
+                    <div id="tab-1" class="tab-pane <?php if($tab != 2): ?>active<?php endif; ?>" >
                         <div class="panel-body">
                             <div class="ibox-content">
-                                <form method="post" class="form-horizontal" action="{:url('')}">
+                                <form method="post" class="form-horizontal" action="<?php echo url(''); ?>">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">站点名称</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="sitname" value="{$site.sitname}">
+                                            <input type="text" class="form-control" name="sitname" value="<?php echo $site['sitname']; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">关键字</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="sitkeywords" value="{$site.sitkeywords}">
+                                            <input type="text" class="form-control" name="sitkeywords" value="<?php echo $site['sitkeywords']; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">描述</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="sitinfo" value="{$site.sitinfo}">
+                                            <input type="text" class="form-control" name="sitinfo" value="<?php echo $site['sitinfo']; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">验证码类型</label>
                                         <div class="col-sm-4">
                                             <select class="form-control m-b" name="checkcode_type">
-                                                <option value="0" {if $site.checkcode_type === '0'}selected{/if}>字母、数字混合</option>
-                                                <option value="1" {if $site.checkcode_type === '1'}selected{/if}>纯字母</option>
-                                                <option value="2" {if $site.checkcode_type === '2'}selected{/if}>纯数字</option>
+                                                <option value="0" <?php if($site['checkcode_type'] === '0'): ?>selected<?php endif; ?>>字母、数字混合</option>
+                                                <option value="1" <?php if($site['checkcode_type'] === '1'): ?>selected<?php endif; ?>>纯字母</option>
+                                                <option value="2" <?php if($site['checkcode_type'] === '2'): ?>selected<?php endif; ?>>纯数字</option>
                                             </select>
                                         </div>
                                     </div>
@@ -75,22 +76,22 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane {if $tab == 2 }active{/if}">
+                    <div id="tab-2" class="tab-pane <?php if($tab == 2): ?>active<?php endif; ?>">
                         <div class="panel-body">
-                            <form method="post" class="form-horizontal" action="{:url('index')}">
+                            <form method="post" class="form-horizontal" action="<?php echo url('index'); ?>">
                                 <input type="hidden" name="tab" value="2">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">文件大小限制</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="uploadfilemax" value="{$site.uploadfilemax}">
+                                        <input type="text" class="form-control" name="uploadfilemax" value="<?php echo $site['uploadfilemax']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">文件类型</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="uploadfiletype" value="{$site.uploadfiletype}">
+                                        <input type="text" class="form-control" name="uploadfiletype" value="<?php echo $site['uploadfiletype']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -99,11 +100,11 @@
                                     <div class="col-sm-10">
                                         <div class="radio i-checks radio-inline">
                                             <label>
-                                                <input type="radio" value="0" name="watermark" {if $site.watermark == 0}checked{/if}> <i></i> 否</label>
+                                                <input type="radio" value="0" name="watermark" <?php if($site['watermark'] == 0): ?>checked<?php endif; ?>> <i></i> 否</label>
                                         </div>
                                         <div class="radio i-checks radio-inline">
                                             <label>
-                                                <input type="radio" value="1" name="watermark" {if $site.watermark == 1}checked{/if}> <i></i> 是</label>
+                                                <input type="radio" value="1" name="watermark" <?php if($site['watermark'] == 1): ?>checked<?php endif; ?>> <i></i> 是</label>
                                         </div>
                                     </div>
                                 </div>
