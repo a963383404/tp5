@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/var/www/vcmycloud/public/../application/admin/view/config/index.html";i:1475118640;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/var/www/vcmycloud/public/../application/admin/view/config/index.html";i:1475200147;}*/ ?>
 <html><!-- Mirrored from www.zi-han.net/theme/hplus/tabs_panels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT --><head>
 
     <meta charset="utf-8">
@@ -9,7 +9,8 @@
     <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
     <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="__STATIC__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link rel="shortcut icon" href="__STATIC__/img/favicon.ico">
+    <link href="__STATIC__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="__STATIC__/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="__STATIC__/css/animate.min.css" rel="stylesheet">
     <link href="__STATIC__/css/style.min862f.css?v=4.1.0" rel="stylesheet">

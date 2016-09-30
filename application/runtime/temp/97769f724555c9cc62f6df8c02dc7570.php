@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/vcmycloud/public/../application/admin/view/index/index.html";i:1475119848;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/vcmycloud/public/../application/admin/view/index/index.html";i:1475200147;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
 
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="__STATIC__/img/favicon.ico">
     <link href="__STATIC__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="__STATIC__/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="__STATIC__/css/animate.min.css" rel="stylesheet">

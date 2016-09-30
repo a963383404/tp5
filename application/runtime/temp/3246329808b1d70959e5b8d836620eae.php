@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"/var/www/vcmycloud/public/../application/admin/view/index/content.html";i:1475032160;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"/var/www/vcmycloud/public/../application/admin/view/index/content.html";i:1475200147;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +12,7 @@
 
     <title>雪狐ThinkPHP5内容管理系统后台首页</title>
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="__STATIC__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link rel="shortcut icon" href="__STATIC__/img/favicon.ico"> <link href="__STATIC__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="__STATIC__/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
 
     <link href="__STATIC__/css/animate.min.css" rel="stylesheet">
