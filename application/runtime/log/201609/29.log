@@ -26389,3 +26389,115 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2016-09-29T23:33:19+08:00 ] 172.17.0.2 192.168.1.101 GET /admin/index
+[ log ] 192.168.1.107:9097/admin/index [运行时间：0.011814s][吞吐率：84.64req/s] [内存消耗：508.48kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /var/www/html/application/admin/controller/Index.php 8 - 11
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T23:33:19+08:00 ] 172.17.0.2 192.168.1.101 GET /admin/index/content
+[ log ] 192.168.1.107:9097/admin/index/content [运行时间：0.004034s][吞吐率：247.89req/s] [内存消耗：467.16kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'referer' => 'http://192.168.1.107:9097/admin/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method content ] {
+  @@ /var/www/html/application/admin/controller/Index.php 13 - 16
+}
+
+[ info ] [ VIEW ] /var/www/html/public/../application/admin/view/index/content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T23:33:19+08:00 ] 172.17.0.2 192.168.1.101 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.005235s][吞吐率：191.02req/s] [内存消耗：377.62kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-09-29T23:33:19+08:00 ] 172.17.0.2 192.168.1.101 GET /static/css/bootstrap.min.css.map
+[ log ] 192.168.1.107:9097/static/css/bootstrap.min.css.map [运行时间：0.004037s][吞吐率：247.70req/s] [内存消耗：376.77kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.1.107:9097',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh,zh-CN;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=v8rl2clraij3hq29pdne3em0t3; think_var=zh',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

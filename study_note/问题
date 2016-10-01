@@ -26,4 +26,50 @@
            'fields_strict'  => true,//修改为false就不检测了
         （2）动态修改
             db()->strict(false)->insertGetId();
+4.{if $operate='editor'}url('update'){else/}url('index'){/if}这样写生成不了URL地址，正确写法：
+    {if $operate='editor'}{:url('update')}{else/}{:url('index')}{/if}
+5.令牌验证
+    之前在验证规则里面写，但出现错误，还没找到出错的原因
+    阅读源码：Z:\tp5\thinkphp\library\think\Validate.php第1102行和1207行后，发现可以直接进行验证：
+        Validate::token('__token__','',['__token__'=>input('param.__token__')]);
+        注意，要引入类：use think\Validate;
+
+
+[tr, prevObject: n.fn.init[1], context: i.fa.fa-trash.text-navy]
+[tr, prevObject: n.fn.init[1], context: document]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

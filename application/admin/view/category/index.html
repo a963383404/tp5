@@ -34,7 +34,7 @@
                         <div class="panel-body">
                             <div class="ibox-content">
                                 <form method="post" class="form-horizontal" action="{:url('')}">
-
+                                    <input type="hidden" name="__token__" value="{$Request.token}" />
                                     <div class="table-responsive">
                                         <table class="table table-striped">
                                             <thead>
@@ -60,10 +60,11 @@
                     <div id="tab-2" class="tab-pane {if $tab == 2 }active{/if}">
                         <div class="panel-body">
                             <form method="post" class="form-horizontal" action="
-                            {if $operate='editor'}url('update'){else/}url('index'){/if}
+                            {if $operate == 'editor'}{:url('update','id='.$catArr.id)}{else/}{:url('index')}{/if}
                             ">
+                                <input type="hidden" name="__token__" value="{$Request.token}" />
                                 <div class="hr-line-dashed"></div>
-                                <input type="hidden" name="tab" value="2">
+                                <input type="hidden" name="tab" value="{if $operate == 'editor' or $operate == 'add'}1{else/}2{/if}">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">分类名称</label>
 
@@ -154,7 +155,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-primary" type="submit">
-                                            {if $editor=='1'}更新{else/}提交{/if}
+                                            {if $operate == 'editor'}更新{else/}提交{/if}
                                         </button>
                                     </div>
                                 </div>
@@ -194,23 +195,31 @@
             }
         });
         $(".table .fa-trash").on("click",function(){
-            var a       = $(this).parent('a'),
-                href    = a.attr('href')
-                val     = a.next('input').val()
-                tr      = a.parent().parent('tr');
+            var a               = $(this).parent('a'),
+                href            =       a.attr('href')
+                val             = a.next('input').val(),
+                token_validity  = $('input[name=__token__]').val();
+            var data            = {'__token__' : token_validity};
             var index = layer.open({
-                title   :   "删除提醒",
-                content :   '确定要删除分类“'+val+'”吗？',
-                btn     :   ['是','否'],
-                'yes'   :   function(index,layero){
-                                layer.close(index);
-                                $.get(href).success(function(result){
-                                    if (result.data.code =202 ){
-                                        tr.remove();
-                                    }
-                                });
-                            },
-            });
+                    title   :   "删除提醒",
+                    content :   '确定要删除分类“'+val+'”吗？（如果其包含子类，也会被一同删除！）',
+                    btn     :   ['是','否'],
+                    'yes'   :   function(index,layero){
+                                    layer.close(index);
+                                    $.get(href,data).success(function(result){
+                                        if (result.data.code =202 ){
+                                            var tr;
+                                            var ids = result.data.ids;
+                                            for ( var id in ids ){
+                                                tr  = $("td[id="+ids[id]+"]").parent("tr");
+                                                tr.remove();
+                                            }
+                                        }else if(result.data.code =202){
+
+                                        }
+                                    });
+                                },
+                });
             return false;
         })
     });

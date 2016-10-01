@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/var/www/html/public/../application/admin/view/category/index.html";i:1475154025;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/var/www/html/public/../application/admin/view/category/index.html";i:1475303682;}*/ ?>
 <html><!-- Mirrored from www.zi-han.net/theme/hplus/tabs_panels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT --><head>
 
     <meta charset="utf-8">
@@ -35,7 +35,7 @@
                         <div class="panel-body">
                             <div class="ibox-content">
                                 <form method="post" class="form-horizontal" action="<?php echo url(''); ?>">
-
+                                    <input type="hidden" name="__token__" value="<?php echo \think\Request::instance()->token(); ?>" />
                                     <div class="table-responsive">
                                         <table class="table table-striped">
                                             <thead>
@@ -60,14 +60,17 @@
                     </div>
                     <div id="tab-2" class="tab-pane <?php if($tab == 2): ?>active<?php endif; ?>">
                         <div class="panel-body">
-                            <form method="post" class="form-horizontal" action="<?php echo url('index'); ?>">
+                            <form method="post" class="form-horizontal" action="
+                            <?php if($operate == 'editor'): ?><?php echo url('update','id='.$catArr['id']); else: ?><?php echo url('index'); endif; ?>
+                            ">
+                                <input type="hidden" name="__token__" value="<?php echo \think\Request::instance()->token(); ?>" />
                                 <div class="hr-line-dashed"></div>
-                                <input type="hidden" name="tab" value="2">
+                                <input type="hidden" name="tab" value="<?php if($operate == 'editor' or $operate == 'add'): ?>1<?php else: ?>2<?php endif; ?>">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">分类名称</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="catname" value="">
+                                        <input type="text" class="form-control" name="catname" value="<?php echo $catArr['catname']; ?>">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
@@ -108,14 +111,14 @@
                                     <label class="col-sm-2 control-label">分类目录</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="catdir" value="">
+                                        <input type="text" class="form-control" name="catdir" value="<?php echo $catArr['catdir']; ?>">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">指定分类地址</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="seturl">
+                                        <input type="text" class="form-control" name="seturl" value="<?php echo $catArr['seturl']; ?>">
                                         <span class="help-block m-b-none">留空按默认地址访问</span>
                                     </div>
                                 </div>
@@ -126,11 +129,11 @@
                                     <div class="col-sm-10">
                                         <div class="radio i-checks radio-inline">
                                             <label>
-                                                <input type="radio" value="0" name="ismenu" > <i></i> 否</label>
+                                                <input type="radio" value="0" name="ismenu" <?php if($catArr['ismenu'] == 0): ?>checked<?php endif; ?>> <i></i> 否</label>
                                         </div>
                                         <div class="radio i-checks radio-inline">
                                             <label>
-                                                <input type="radio" value="1" name="ismenu" > <i></i> 是</label>
+                                                <input type="radio" value="1" name="ismenu" <?php if($catArr['ismenu'] == 1): ?>checked<?php endif; ?>> <i></i> 是</label>
                                         </div>
                                     </div>
                                 </div>
@@ -146,13 +149,15 @@
                                     <label class="col-sm-2 control-label">显示排序</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="listorder" value="">
+                                        <input type="text" class="form-control" name="listorder" value="<?php echo $catArr['listorder']; ?>">
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-primary" type="submit">提交</button>
+                                        <button class="btn btn-primary" type="submit">
+                                            <?php if($operate == 'editor'): ?>更新<?php else: ?>提交<?php endif; ?>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
@@ -170,6 +175,7 @@
 <script src="__STATIC__/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="__STATIC__/js/content.min.js?v=1.0.0"></script>
 <script src="__STATIC__/js/plugins/iCheck/icheck.min.js"></script>
+<script src="__BOWER__/layer/layer.js"></script>
 <script>
     $(document).ready(function () {
         $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",});
@@ -180,7 +186,7 @@
             }else{
                 var val = div.children(':input[type=checkbox]').attr('value','0');
             }
-        })
+        });
         $(".iCheck-helper").on("click",function(){
             var div = $(this).parent('div');
             if ( div.hasClass('checked') ) {
@@ -188,6 +194,34 @@
             }else{
                 var val = div.children(':input[type=checkbox]').attr('value','0');
             }
+        });
+        $(".table .fa-trash").on("click",function(){
+            var a               = $(this).parent('a'),
+                href            =       a.attr('href')
+                val             = a.next('input').val(),
+                token_validity  = $('input[name=__token__]').val();
+            var data            = {'__token__' : token_validity};
+            var index = layer.open({
+                    title   :   "删除提醒",
+                    content :   '确定要删除分类“'+val+'”吗？（如果其包含子类，也会被一同删除！）',
+                    btn     :   ['是','否'],
+                    'yes'   :   function(index,layero){
+                                    layer.close(index);
+                                    $.get(href,data).success(function(result){
+                                        if (result.data.code =202 ){
+                                            var tr;
+                                            var ids = result.data.ids;
+                                            for ( var id in ids ){
+                                                tr  = $("td[id="+ids[id]+"]").parent("tr");
+                                                tr.remove();
+                                            }
+                                        }else if(result.data.code =202){
+
+                                        }
+                                    });
+                                },
+                });
+            return false;
         })
     });
 </script>

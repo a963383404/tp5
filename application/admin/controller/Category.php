@@ -3,6 +3,7 @@ namespace app\admin\controller;
 
 use think\Controller;
 use app\common\util\Tree;
+use think\Validate;
 
 class Category extends Controller
 {
@@ -14,16 +15,19 @@ class Category extends Controller
     public function _initialize() {
         $this->category = db('category');
         $this->tab      = input('param.tab');
-        $editor         = 0;
+        $operate        = '';//操作类型
         if ( $id = input('param.id') ) {
             $this->optSel = $id;
             if ( input('param.operate') == 'editor' ) {
                 $this->catArr = $this->category->where(['id'=>$id])->find();
-                $editor       = 1;
+                $operate      = 'editor';
+                $this->optSel = $this->catArr['parentid'];
+            } else {
+                $operate      = 'add';
             }
         }
         $this->assign("catArr",$this->catArr);
-        $this->assign("editor",$editor);
+        $this->assign("operate",$operate);
         $this->assign("tab",$this->tab);
     }
 
@@ -57,9 +61,9 @@ class Category extends Controller
 
             $tr         = "<tr>
                                 <td>
-                                    <input class='form-constrol col-sm-12' type='text' name='listorder' value='\$listorder'>
+                                    <input class='form-constrol' style='width:80%;' type='text' name='listorder' value='\$listorder'>
                                 </td>
-                                <td>\$id</td>
+                                <td id='\$id'>\$id</td>
                                 <td style='text-align:left'>\$spacer\$catname</td>
                                 <td>\$modelid</td>
                                 <td>
@@ -79,15 +83,44 @@ class Category extends Controller
     }
 
     public function update() {
-
+        $r = Validate::token('__token__','',['__token__'=>input('param.__token__')]);
+        if ( $r ) {
+            if ( $this->category->strict(false)->update(input('param.'))){
+                return $this->success("更新成功",url("index"));
+            }else {
+                return $this->success("更新失败",url("index"));
+            }
+        }else {
+            return $this->success("令牌验证失败",url("index"));
+        }
     }
 
     public function delete(){
-        if($this->category->where(['id'=>input('param.id')])->delete()){
-            return $this->success("删除成功",url("index"),['code'=>200]);
-        }else{
-            return $this->success("删除失败",url("index"));
+        $r = Validate::token('__token__','',['__token__'=>input('param.__token__')]);
+        if ( $r ) {
+            //获取其所有子类的id
+            $id     = input('param.id');
+            $ids    = $this->getCategoryAllSubId($id);
+            if($this->category->delete($ids)){
+                return $this->success("删除成功",url("index"),['code'=>200,'ids'=>$ids]);
+            }else{
+                return $this->success("删除失败",url("index"));
+            }
+        }else {
+            return $this->success("令牌验证失败",url("index"));
         }
+    }
 
+    //获取category表中某个id下的所有子类id
+    public function getCategoryAllSubId($id) {
+        global $arr;
+        $arr[] = $id;
+        $idArr = $this->category->where(['parentid'=>$id])->field('id')->select();
+        if ( !empty($idArr) ) {
+            foreach ( $idArr as $k => $v ) {
+                $this->getCategoryAllSubId($v['id']);
+            }
+        }
+        return $arr;
     }
 }
